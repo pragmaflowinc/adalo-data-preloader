@@ -1,0 +1,38 @@
+{
+  "name": "adalo-data-preloader",
+  "description": "Fetch data for all parent screens",
+  "version": "1.0.10",
+  "main": "index.js",
+  "license": "ISC",
+  "author": "Steven McKeown",
+  "scripts": {
+    "start": "adalo dev",
+    "login": "adalo login",
+    "publish": "adalo publish"
+  },
+  "adalo": {
+    "logo": "./example-logo.png",
+    "displayName": "Adalo Preloader",
+    "components": [
+      {
+        "name": "AdaloPreloader",
+        "manifest": "./src/components/AdaloPreloader/manifest.json"
+      }
+    ],
+    "iosInstallScript": "./scripts/install.sh",
+    "androidInstallScript": "./scripts/install.sh"
+  },
+  "devDependencies": {
+    "@adalo/cli": "^0.0.43",
+    "react": "^16.9.0",
+    "react-art": "^16.6.0",
+    "react-dom": "^16.9.0",
+    "react-native-web": "^0.9.5"
+  },
+  "dependencies": {
+    "@protonapp/proton-runner": "^0.2.33",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
+    "redux-persist": "^6.0.0"
+  }
+}

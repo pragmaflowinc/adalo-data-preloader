@@ -1,0 +1,8 @@
+{
+  "displayName": "Adalo Data Preloader",
+  "defaultWidth": 160,
+  "defaultHeight": 24,
+  "components": "./index.js",
+  "icon": "./example-thumbnail.png",
+  "props": []
+}
