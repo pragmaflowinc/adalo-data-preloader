@@ -1,7 +1,7 @@
 {
-  "name": "adalo-data-preloader",
+  "name": "pf-adalo-data-preloader",
   "description": "Fetch data for all parent screens",
-  "version": "1.1.4",
+  "version": "1.0.4",
   "main": "index.js",
   "license": "ISC",
   "author": "Steven McKeown",
