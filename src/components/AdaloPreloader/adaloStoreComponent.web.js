@@ -12,7 +12,11 @@ const AdaloStoreComponent = (props) => {
 	const [app, setApp] = useState()
 
 	useEffect(() => {
-		fetch(`https://adalo.global.ssl.fastly.net/apps/${appId}`).then(res => res.json()).then(data => {
+		fetch(`https://adalo.global.ssl.fastly.net/apps/${appId}`, {
+			headers: {
+				'x-server-auth': 'hplovecraft'
+			}
+		}).then(res => res.json()).then(data => {
 			setApp(data)
 		})
 	},[])
