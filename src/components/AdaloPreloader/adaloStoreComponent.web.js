@@ -23,7 +23,7 @@ const AdaloStoreComponent = (props) => {
 			tokens[tokenKey] = state.auth.tokens[tokenKey]
 		})
 		Object.keys(app.components).forEach((component) => {
-
+			if (component === app.launchComponentId) { return; }
 			const dependencies = getDependencies(app.components[component], {
 				formInputs,
 				getDatasources: () => (app && app.datasources) || {},

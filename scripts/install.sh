@@ -2,7 +2,7 @@
 # import the unsafeGetToken and AppProvider
 cat <<EOF > /tmp/adalo-app-sed
 /proton-runner/a\\
-import { AppProvider } from 'adalo-data-preloader';\
+import { AppProvider } from 'pf-adalo-data-preloader';\
 import { unsafeGetToken } from '@protonapp/proton-runner/lib/ducks/auth'\\
 EOF
 
