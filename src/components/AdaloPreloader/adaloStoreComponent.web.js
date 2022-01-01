@@ -65,7 +65,9 @@ const AdaloStoreComponent = (props) => {
 	}
 
 	useEffect(() => {
-		if (app && stateTokens && formInputs) {
+		if (app && stateTokens && formInputs && global.dataPreloaderLoaded === undefined) {
+			// prevent component destruction and recreation loop
+			global.dataPreloaderLoaded = true
 			fetchAppData()
 		}
 	}, [app, stateTokens, formInputs])
