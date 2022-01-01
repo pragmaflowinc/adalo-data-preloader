@@ -13,9 +13,6 @@ const AdaloStoreComponent = (props) => {
 
 	const fetchAppData = () => {
 		const datasources = (app && app.datasources) || {}
-		// Object.keys(state.auth.tokens).map(tokenKey => {
-		// 	tokens[tokenKey] = state.auth.tokens[tokenKey]
-		// })
 		Object.keys(app.components).forEach((component) => {
 			if (component === app.launchComponentId) { return; }
 			const dependencies = getDependencies(app.components[component], {
@@ -54,7 +51,9 @@ const AdaloStoreComponent = (props) => {
 	}
 
 	useEffect(() => {
-		if (app && stateTokens && formInputs) {
+		if (app && stateTokens && formInputs && global.dataPreloaderLoaded === undefined) {
+			// prevent component destruction and recreation loop
+			global.dataPreloaderLoaded = true
 			fetchAppData()
 		}
 	}, [app, stateTokens, formInputs])
